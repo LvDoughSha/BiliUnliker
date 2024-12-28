@@ -1,8 +1,10 @@
 # BiliUnliker
 
+# 哔不感兴趣哩
+<!--
 [![English](https://img.shields.io/badge/Language-English-blue)](README_EN.md)
 [![中文](https://img.shields.io/badge/语言-中文-red)](README_CN.md)
-
+-->
 ## Description
 
 A chrome extension that works to automatically unlike videos based on user-defined keywords exclusively on <https://www.bilibili.com>
