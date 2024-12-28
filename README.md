@@ -5,7 +5,7 @@
 
 ## Description
 
-A chrome extension that works to automatically unlike videos based on user-defined keywords exclusively on www.bilibili.com
+A chrome extension that works to automatically unlike videos based on user-defined keywords exclusively on <https://www.bilibili.com>
 
 
 ## 项目描述
@@ -37,5 +37,4 @@ Based on tests, the extension currently works on following browsers (all newest 
 
 经过测试，目前该扩展支持以下浏览器（最新版本）：
 
-    MSEdge, Catsxp, Google Chrome  
-
+[Microsoft Edge](https://www.microsoft.com/en-us/edge), [Catsxp](https://www.catsxp.com/), [Google Chrome](https://www.google.com/chrome/)
