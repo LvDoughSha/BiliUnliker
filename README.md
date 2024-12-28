@@ -34,6 +34,7 @@ To install the project, follow these steps:
 ## Works on
 
 Based on tests, the extension currently works on following browsers (all newest version):
+
 经过测试，目前该扩展支持以下浏览器（最新版本）：
 
     MSEdge, Catsxp, Google Chrome  
