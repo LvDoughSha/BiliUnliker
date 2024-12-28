@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extension_name__",
+  "author": "LvDoughSha绿蔸裟",
+  "version": "1.0",
+  "default_locale": "zh",
+  "description": "__MSG_extension_description__",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/",
+        "http://www.bilibili.com/"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

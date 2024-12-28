@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>__MSG_extension_name__</title>
+    <style>
+        body {
+            width: 300px;
+            font-family: Arial, sans-serif;
+        }
+        #keywordInput {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #keywordList {
+            max-height: 150px; /* Set a max height for scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+            border: 1px solid #ccc; /* Optional: Add a border */
+            padding: 5px; /* Optional: Add some padding */
+        }
+        .keywordItem {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Space between keyword and button */
+            align-items: center; /* Center items vertically */
+            margin-bottom: 5px; /* Space between items */
+        }
+        .deleteButton {
+            background-color: black; /* Red background for delete button */
+            color: white; /* White text */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            padding: 2px 5px; /* Padding for button */
+        }
+    </style>
+</head>
+<body>
+    <h1>__MSG_popup_titles__</h1>
+    <input type="text" id="keywordInput" placeholder="__MSG_enter_keywords__">
+    <button id="saveKeywords">__MSG_save_keywords__</button>
+    <h2>__MSG_keywords__:</h2>
+    <div id="keywordList"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

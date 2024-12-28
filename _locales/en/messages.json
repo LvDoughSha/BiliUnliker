@@ -1,0 +1,23 @@
+{
+    "extension_name": {
+        "message": "Bili Unliker"
+    },
+    "extension_description": {
+        "message": "Automatically unlike videos based on user-defined keywords."
+    },
+    "popup_titles": {
+        "message": "Video Titles"
+    },
+    "enter_keywords": {
+        "message": "Enter keywords (comma-separated)"
+    },
+    "save_keywords": {
+        "message": "Save Keywords"
+    },
+    "keywords": {
+        "message": "Keywords"
+    },
+    "delete": {
+        "message": "delete"
+    }
+}

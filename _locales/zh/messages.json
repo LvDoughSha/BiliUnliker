@@ -1,0 +1,23 @@
+{
+    "extension_name": {
+        "message":"哔不感兴趣哩"
+    },
+    "extension_description": {
+        "message": "根据关键词自动“不感兴趣”视频。"
+    },
+    "popup_titles": {
+        "message": "哔哔哩哩"
+    },
+    "enter_keywords": {
+        "message": "输入关键词（用英文逗号分隔）"
+    },
+    "save_keywords": {
+        "message": "保存"
+    },
+    "keywords": {
+        "message": "关键词"
+    },
+    "delete": {
+        "message": "删除"
+    }
+}
