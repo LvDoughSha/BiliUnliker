@@ -43,7 +43,7 @@ Based on tests, the extension currently works on following browsers (all newest 
 
 ### New Features
 
-User can define their own keywords for video titles and author(Uploaders) names respectively.
+User can define their own keywords for video titles and author(Uploader) names respectively.
 
 
 ### 新功能
