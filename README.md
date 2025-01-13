@@ -40,3 +40,12 @@ Based on tests, the extension currently works on following browsers (all newest 
 经过测试，目前该扩展支持以下浏览器（最新版本）：
 
 [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Catsxp](https://www.catsxp.com/), [Google Chrome](https://www.google.com/chrome/)
+
+### New Features
+
+User can define their own keywords for video titles and author(Uploaders) names respectively.
+
+
+### 新功能
+
+用户可以针对视频标题以及作者(UP主)名称分别自定义关键词(字)。
