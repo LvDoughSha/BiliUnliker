@@ -14,10 +14,19 @@
     "save_keywords": {
         "message": "保存"
     },
-    "keywords": {
-        "message": "关键词"
+    "title_keywords": {
+        "message": "标题关键词"
+    },
+    "uploader_keywords": {
+        "message": "Up主关键词"
     },
     "delete": {
         "message": "删除"
+    },
+    "delete_all": {
+        "message": "全部删除"
+    },
+    "deleting_all": {
+        "message": "真的要全部删除吗？"
     }
 }

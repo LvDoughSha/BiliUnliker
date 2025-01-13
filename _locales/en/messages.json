@@ -6,7 +6,7 @@
         "message": "Automatically unlike videos based on user-defined keywords."
     },
     "popup_titles": {
-        "message": "Video Titles"
+        "message": "BibiLili"
     },
     "enter_keywords": {
         "message": "Enter keywords (comma-separated)"
@@ -14,10 +14,19 @@
     "save_keywords": {
         "message": "Save Keywords"
     },
-    "keywords": {
-        "message": "Keywords"
+    "title_keywords": {
+        "message": "Title Keywords"
+    },
+    "uploader_keywords": {
+        "message": "Uploader Keywords"
     },
     "delete": {
-        "message": "delete"
+        "message": "Delete"
+    },
+    "delete_all": {
+        "message": "Delete ALL"
+    },
+    "deleting_all": {
+        "message": "Are you sure deteling them all?"
     }
 }
