@@ -53,53 +53,39 @@ const ignore = async (videoCard, type) => {
     }
 };
 
-// Check for videos matching keywords
-const checkAndIgnore = () => {
-    if (isProcessing) return;
-    isProcessing = true;
+// Check for matching keywords and perform ignore
+const checkAndIgnore = (type, keyword_type, selector, process_flag) => {
+    if (process_flag) return;
+    process_flag = true;
 
-    chrome.storage.local.get('title_keywords', (data) => {
-        const keywords = data.title_keywords || [];
+    chrome.storage.local.get(keyword_type, (data) => {
+        const keywords = data[keyword_type] || [];
         const videoCards = document.querySelectorAll('.bili-video-card__wrap');
 
         videoCards.forEach((videoCard) => {
             if (ignoredVideos.has(videoCard)) return;
 
-            const titleElement = videoCard.querySelector('.bili-video-card__info--tit');
-            const title = titleElement ? titleElement.title : '';
-            const keywordFound = keywords.some(keyword => title.includes(keyword));
+            const element = videoCard.querySelector(selector);
+            const text = element ? element.getAttribute('title').trim() : '';
+            const keywordFound = keywords.some(keyword => 
+                text.toLowerCase().includes(keyword.trim().toLowerCase()));
 
             if (keywordFound) {
-                ignore(videoCard, 'video');
+                ignore(videoCard, type);
             }
         });
-        isProcessing = false;
+        process_flag = false;
     });
 };
 
-// Check for uploaders matching keywords
+// Check for videos
+const checkAndIgnoreVideo = () => {
+    checkAndIgnore('video', 'title_keywords', '.bili-video-card__info--tit', isProcessing);
+};
+
+// Check for uploaders
 const checkAndIgnoreUp = () => {
-    if (isProcessing2) return;
-    isProcessing2 = true;
-
-    chrome.storage.local.get('uploader_keywords', (data) => {
-        const keywords = data.uploader_keywords || [];
-        const videoCards = document.querySelectorAll('.bili-video-card__wrap');
-
-        videoCards.forEach((videoCard) => {
-            if (ignoredVideos.has(videoCard)) return;
-
-            const uploaderElement = videoCard.querySelector('.bili-video-card__info--author');
-            const uploader = uploaderElement ? uploaderElement.getAttribute('title').trim() : '';
-            const keywordFound = keywords.some(keyword => 
-                uploader.toLowerCase().includes(keyword.trim().toLowerCase()));
-
-            if (keywordFound) {
-                ignore(videoCard, 'up');
-            }
-        });
-        isProcessing2 = false;
-    });
+    checkAndIgnore('up', 'uploader_keywords', '.bili-video-card__info--author', isProcessing2);
 };
 
 // Debounce function
@@ -111,12 +97,12 @@ const debounce = (func, delay) => {
     };
 };
 
-const debouncedCheckAndIgnore = debounce(checkAndIgnore, 500);
+const debouncedCheckAndIgnoreVideo = debounce(checkAndIgnoreVideo, 500);
 const debouncedCheckAndIgnoreUp = debounce(checkAndIgnoreUp, 500);
 
 // MutationObserver
 const observer = new MutationObserver(() => {
-    debouncedCheckAndIgnore();
+    debouncedCheckAndIgnoreVideo();
     debouncedCheckAndIgnoreUp();
 });
 
@@ -125,5 +111,5 @@ if (videoContainer) {
     observer.observe(videoContainer.parentNode, { childList: true, subtree: true });
 }
 
-checkAndIgnore();
+checkAndIgnoreVideo();
 checkAndIgnoreUp();
